@@ -1,5 +1,19 @@
 # Student_Result_Management_Portal
 This project is a window-based application that allows admins to log in and manage students' data and results. It was developed using Java, Java Swing, SQL, and JDBC for database connectivity.
+<p float="left">
+  <img src="/SRM GUI Screenshots/1.png" width="500" />
+  <img src="/SRM GUI Screenshots/2.png" width="500" /> 
+  <img src="/SRM GUI Screenshots/3.png" width="500" />
+  <img src="/SRM GUI Screenshots/4.png" width="500" />
+  <img src="/SRM GUI Screenshots/5.png" width="500" /> 
+  <img src="/SRM GUI Screenshots/6.png" width="500" />
+  <img src="/SRM GUI Screenshots/7.png" width="500" />
+  <img src="/SRM GUI Screenshots/8.png" width="500" /> 
+  <img src="/SRM GUI Screenshots/9.png" width="500" />
+  <img src="/SRM GUI Screenshots/10.png" width="500" />
+  <img src="/SRM GUI Screenshots/11.png" width="500" /> 
+  <img src="/SRM GUI Screenshots/12.png" width="500" />
+</p>
 
 # Features
 1. Admin login: The portal has a secure login system for admins to access the application's features.
