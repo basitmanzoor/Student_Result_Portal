@@ -5,6 +5,7 @@
 package student_result_portal;
 
 import javax.swing.JOptionPane;
+import java.sql.*;
 
 /**
  *
@@ -96,16 +97,35 @@ public class adminHome extends javax.swing.JFrame {
         setVisible(false);
         String UserName = jTextField1.getText();
         String Password = jPasswordField1.getText();
-        
-        if(UserName.equals("admin") && Password.equals("admin123")){
-            setVisible(false);
-            new AdminPortal().setVisible(true);
-            JOptionPane.showMessageDialog(null, "Logged In successfull");
+        try{
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/srm", "root", "BASITkaw123@");
+            
+            Statement st = con.createStatement();
+            ResultSet rs = st.executeQuery("SELECT * FROM admin WHERE username='"+UserName+"' AND password ='"+Password+"' ");
+            
+            if(rs.next()){
+                setVisible(false);
+                new AdminPortal().setVisible(true);
+                JOptionPane.showMessageDialog(null, "Log in successfull");
+            }
+            else{
+                setVisible(true);
+                JOptionPane.showMessageDialog(null, "Invalid Username or Password");
+            }
         }
-        else{
-            setVisible(true);
-            JOptionPane.showMessageDialog(null,"Invalid Username or Password");
+        catch(Exception e){
+            JOptionPane.showMessageDialog(null, e.toString());
         }
+//        if(UserName.equals("admin") && Password.equals("admin123")){
+//            setVisible(false);
+//            new AdminPortal().setVisible(true);
+//            JOptionPane.showMessageDialog(null, "Logged In successfully");
+//        }
+//        else{
+//            setVisible(true);
+//            JOptionPane.showMessageDialog(null,"Invalid Username or Password");
+//        }
         
         
     }//GEN-LAST:event_jButton1ActionPerformed

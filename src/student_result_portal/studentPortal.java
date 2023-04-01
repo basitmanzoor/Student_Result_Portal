@@ -148,15 +148,15 @@ public class studentPortal extends javax.swing.JFrame {
         jLabel18.setFont(new java.awt.Font("Segoe UI", 3, 14)); // NOI18N
         jLabel18.setText("Passing Marks");
 
-        jLabel19.setText("40");
+        jLabel19.setText("30");
 
-        jLabel20.setText("40");
+        jLabel20.setText("30");
 
-        jLabel21.setText("40");
+        jLabel21.setText("30");
 
-        jLabel22.setText("40");
+        jLabel22.setText("30");
 
-        jLabel23.setText("40");
+        jLabel23.setText("30");
 
         jLabel24.setFont(new java.awt.Font("Segoe UI", 3, 14)); // NOI18N
         jLabel24.setText("Obtained Marks");
@@ -193,7 +193,7 @@ public class studentPortal extends javax.swing.JFrame {
                             .addComponent(jLabel15, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel16, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel17, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jButton1))
                 .addGap(53, 53, 53)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jLabel25, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -331,7 +331,7 @@ public class studentPortal extends javax.swing.JFrame {
                 int avg = sum/5;
                 jTextField12.setText(String.valueOf(sum));
                 
-                if(avg > 30){
+                if(avg > 30 && s1>30 && s2>30 && s3>30 && s4>30 && s5>30){
                     jTextField13.setText("PASS");
                 }
                 else{
